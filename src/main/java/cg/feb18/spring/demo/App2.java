@@ -1,23 +1,14 @@
 package cg.feb18.spring.demo;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cg.feb18.spring.demo.model.Employee;
 
-/**
- * 
- * @author Vaman Deshmukh
- *
- */
-
-// Bean = object 
-// IoC = Inversion of Control 
-// DI = Dependency Injection 
-// Container = bean container 
-
-public class App {
+@ComponentScan
+public class App2 {
 
 	public static void main(String[] args) {
 
@@ -27,10 +18,11 @@ public class App {
 //		Employee emp = new Employee(101, "Sonu", 50000); // 4 , 8, 8 = 20 100 2000
 
 		// spring approach
-		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(App2.class);
 
 		Employee emp = context.getBean(Employee.class);
 		Employee emp2 = context.getBean(Employee.class);
+		emp.setEmployeeId(101);
 
 		System.out.println(emp.hashCode());
 		System.out.println(emp2.hashCode());
