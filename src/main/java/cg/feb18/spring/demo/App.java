@@ -17,6 +17,7 @@ import cg.feb18.spring.demo.model.Employee;
 // DI = Dependency Injection 
 // Container = bean container 
 
+// XML based configuration 
 public class App {
 
 	public static void main(String[] args) {

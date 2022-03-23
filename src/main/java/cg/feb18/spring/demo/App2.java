@@ -7,15 +7,13 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 import cg.feb18.spring.demo.model.Employee;
 
+// annotation based configuration 
 @ComponentScan
 public class App2 {
 
 	public static void main(String[] args) {
 
 		System.out.println("Start");
-
-		// pure Java approach
-//		Employee emp = new Employee(101, "Sonu", 50000); // 4 , 8, 8 = 20 100 2000
 
 		// spring approach
 		ApplicationContext context = new AnnotationConfigApplicationContext(App2.class);
