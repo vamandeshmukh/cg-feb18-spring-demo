@@ -8,6 +8,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import cg.feb18.spring.demo.model.Employee;
 
 // annotation based configuration 
+
 @ComponentScan
 public class App2 {
 

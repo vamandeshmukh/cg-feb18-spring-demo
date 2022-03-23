@@ -3,20 +3,24 @@ package cg.feb18.spring.demo.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Employee {
 
 	private int employeeId;
 	private String firstName;
 	private double salary;
 
-	@Autowired
 	public Employee() {
 		super();
-		this.employeeId = 102;
-		this.firstName = "Monu";
-		this.salary = 60000;
 	}
+
+//	@Autowired
+//	public Employee() {
+//		super();
+//		this.employeeId = 102;
+//		this.firstName = "Monu";
+//		this.salary = 60000;
+//	}
 
 	public Employee(int employeeId, String firstName, double salary) {
 		super();
