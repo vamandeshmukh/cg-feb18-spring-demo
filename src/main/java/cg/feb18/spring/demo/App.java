@@ -30,12 +30,7 @@ public class App {
 		// spring approach
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
-		Employee emp = context.getBean(Employee.class);
-		Employee emp2 = context.getBean(Employee.class);
-
-		System.out.println(emp.hashCode());
-		System.out.println(emp2.hashCode());
-		System.out.println(emp.equals(emp2));
+		Employee emp = context.getBean("employee2", Employee.class);
 
 		System.out.println(emp.toString());
 
