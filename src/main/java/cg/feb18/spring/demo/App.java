@@ -1,5 +1,7 @@
 package cg.feb18.spring.demo;
 
+import cg.feb18.spring.demo.model.Employee;
+
 /**
  * 
  * @author Vaman Deshmukh
@@ -17,7 +19,8 @@ public class App {
 
 		System.out.println("Hello World!");
 
-//		Employee emp = new Employee(101, "Sonu", 50000); // 4 , 8, 8   = 20 100 2000 
+		Employee emp = new Employee(101, "Sonu", 50000); // 4 , 8, 8 = 20 100 2000
+		System.out.println(emp.toString());
 
 	}
 }
